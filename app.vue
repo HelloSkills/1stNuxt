@@ -1,5 +1,14 @@
+<script setup lang="ts">
+</script>
 <template>
-  <div>
- Hello World
+  <div :class="$style.wrapper">
+    <temp />
   </div>
 </template>
+
+<style lang="scss" module>
+.wrapper {
+  display: block;
+  text-align: center;
+}
+</style>

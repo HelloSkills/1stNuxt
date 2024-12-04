@@ -1,0 +1,29 @@
+// COLORS
+
+$black: #1a1a1a;
+$zeroway: rgb(33, 29, 37);
+$white: #ffffff;
+$grayblack: #0F0F0F;
+$background: linear-gradient(360deg, rgb(15 23 42), rgb(33, 29, 37));
+$background-opacity: 0.9;
+
+
+$colors: (
+  'black': $black,
+  'zeroway': $zeroway,
+  'white': $white,
+  'grayblack': $grayblack,
+  'background': $background,
+  'background-opacity': $background-opacity,
+);
+
+//background-color: rgb(var(--ui-background) / var(--tw-bg-opacity)
+//#0F0F0F
+
+// GRID
+
+$sm: 600px; // small
+$md: 768px; // medium
+$lg: 1024px; // large
+$xl: 1280px; // extra large
+$xxl: 1440px; // extra extra large
