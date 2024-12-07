@@ -1,0 +1,34 @@
+navigations:
+  Git:
+    name: ''
+    links: ''
+    description: ''
+    comment: '#Комментируем '
+  Nuxt:
+    name: ''
+    links: ''
+    description: ''
+  SCSS:
+    name: ''
+    links: ''
+    description: ''
+  Links:
+    name: ''
+    links: ''
+    description: ''
+  Hotkeys:
+    name: ''
+    links: ''
+    description: ''
+#  AI:
+#    name: ''
+#    links: ''
+#    description: ''
+
+
+#  Git
+#  Nuxt
+#  SCSS
+#  Links & AI
+#  Hotkeys
+

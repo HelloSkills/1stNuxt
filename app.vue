@@ -8,7 +8,8 @@
 
 <style lang="scss" module>
 .wrapper {
-  display: block;
-  text-align: center;
+  //display: block;
+  //text-align: center;
+  //color: white;
 }
 </style>
