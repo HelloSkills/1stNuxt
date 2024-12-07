@@ -1,9 +1,27 @@
 navigations:
+
   Git:
-    name: ''
-    links: ''
-    description: ''
-    comment: '#Комментируем '
+
+    comment: '#Stash - архив изменений'
+    commands:
+      git_stash:
+        name: 'git stash'
+        description: 'Сохраняет текущие изменения в стэш (временное хранилище) и очищает рабочее дерево.'
+      git_stash_list:
+        name: 'git stash list'
+        description: 'Выводит список всех сохраненных стэшей.'
+      git_stash_apply:
+        name: 'git stash apply'
+        description: 'Применяет изменения из последнего сохраненного стэша без его удаления.'
+        usage: 'git stash apply stash@{<индекс>}' # Пример строки для применения
+      git_stash_drop:
+        name: 'git stash drop'
+        description: 'Удаляет указанный стэш или последний, если индекс не указан.'
+        usage: 'git stash drop stash@{<индекс>}' # Пример строки для удаления
+      git_stash_clear:
+        name: 'git stash clear'
+        description: 'Очищает все сохраненные стэши.'
+
   Nuxt:
     name: ''
     links: ''
