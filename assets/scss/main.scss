@@ -4,7 +4,7 @@
 }
 
 * {
-  font-family: 'pt-root-ui_vf', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: "JetBrainsMono", monospace;
 }
 
 html {
@@ -22,7 +22,9 @@ body {
   position: relative;
   font-size: 13.6px;
   margin: 0;
+  color: white;
   background: var(--lb-background, linear-gradient(360deg, rgb(15, 23, 42), rgb(33, 29, 37)));
+  font-family: "JetBrainsMono", monospace;
 
   font-variant-numeric: lining-nums tabular-nums;
   -webkit-font-smoothing: antialiased;

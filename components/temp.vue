@@ -24,24 +24,30 @@ console.log(data.value)
             {{ content.comment }}
           </div>
 
-          <div v-for="(command, key) in content.commands" :key="key" :class="$style.command">
+          <div :class="$style.command" v-for="(command, key) in content.commands" :key="key">
             <strong :class="$style.commandName">
               {{ command.name }}
             </strong>
-            <span class="c-blue"> ~ </span>
 
-            <span :class="$style.commandDescription">
+            <span :class="$style.span" class="hidden md:block c-blue"> ~ </span>
+
+            <span :class="$style.commandDescription" class="hidden md:block">
               {{ command.description }}
             </span>
-<!--            <div v-if="command.usage">-->
-<!--              <em>Usage:</em> <code>{{ command.usage }}</code>-->
-<!--            </div>-->
+            <!--            <div v-if="command.usage">-->
+            <!--              <em>Usage:</em> <code>{{ command.usage }}</code>-->
+            <!--            </div>-->
           </div>
+
 
         </div>
       </div>
     </div>
   </div>
+
+<!--  <pre>-->
+<!--    {{ JSON.stringify(items.Git.commands, null, 2) }}-->
+<!--  </pre>-->
 </template>
 
 <style lang="scss" module>
@@ -53,21 +59,22 @@ console.log(data.value)
   align-items: center;
   text-align: center;
   font-size: 32px;
-  font-family: "JetBrainsMono", monospace;
   line-height: 32px;
   width: 100%;
+  min-width: 400px;
 }
 
 .navigations {
   color: var(--lb-white);
-  font-family: "JetBrainsMono", monospace;
   align-items: center;
   justify-content: center;
+  font-weight: 700;
 }
 
 .nav {
   color: white;
 }
+
 
 .wrap {
   display: flex;
@@ -84,8 +91,10 @@ console.log(data.value)
   background: var(--lb-grayblack);
   border-radius: 25px;
   border: 3px solid rgba(0, 255, 0, 0.1);
-  min-width: 80%;
+  max-width: 80%;
+  width: max-content;
   gap: 20px;
+
 }
 
 .text {
@@ -104,12 +113,28 @@ console.log(data.value)
   color: darkgray;
 }
 
-.commandName {
-  color: mediumseagreen;
+.command {
+  display: flex;
+  gap: 20px;
 }
 
+.commandName {
+  color: mediumseagreen;
+  white-space: nowrap;
+
+}
 .commandDescription {
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-x: auto;
   color: cornflowerblue;
   opacity: 0.3;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 </style>
