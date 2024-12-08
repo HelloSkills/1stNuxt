@@ -1,52 +1,66 @@
 navigations:
-
   Git:
-
-    comment: '#Stash - архив изменений'
-    commands:
-      git_stash:
-        name: 'git stash'
-        description: 'Сохраняет текущие изменения в стэш (временное хранилище) и очищает рабочее дерево.'
-      git_stash_list:
-        name: 'git stash list'
-        description: 'Выводит список всех сохраненных стэшей.'
-      git_stash_apply:
-        name: 'git stash apply'
-        description: 'Применяет изменения из последнего сохраненного стэша без его удаления.'
-        usage: 'git stash apply stash@{<индекс>}' # Пример строки для применения
-      git_stash_drop:
-        name: 'git stash drop'
-        description: 'Удаляет указанный стэш или последний, если индекс не указан.'
-        usage: 'git stash drop stash@{<индекс>}' # Пример строки для удаления
-      git_stash_clear:
-        name: 'git stash clear'
-        description: 'Очищает все сохраненные стэши.'
-
+    sections:
+      remote:
+        title: '#Remote ~ связь с git'
+        commands:
+          git_remote:
+            name: 'git remote -v'
+            description: 'Список удалённых репозиториев (remote) с их URL-адресами, включая пути для fetch (загрузки) и push (отправки).'
+      config:
+          title: '#Config ~ имя / почта'
+          commands:
+            git_config_name:
+              name: 'git config user.name'
+              description: 'Узнать / изменить текущее имя.'
+              usage: 'git config --global user.name "Ваше новое имя"'
+            git_config_email:
+              name: 'git config user.email'
+              description: 'Узнать / изменить текущую почту.'
+              usage: 'git config --global user.email "ваша_новая_почта@example.com"'
+      stash:
+        title: '#Stash ~ архив изменений'
+        commands:
+          git_stash:
+            name: 'git stash'
+            description: 'Сохраняет текущие изменения в стэш (временное хранилище) и очищает рабочее дерево.'
+          git_stash_list:
+            name: 'git stash list'
+            description: 'Выводит список всех сохраненных стэшей.'
+          git_stash_apply:
+            name: 'git stash apply'
+            description: 'Применяет изменения из последнего сохраненного стэша без его удаления.'
+            usage: 'git stash apply stash@{<индекс>}'
+          git_stash_drop:
+            name: 'git stash drop'
+            description: 'Удаляет указанный стэш или последний, если индекс не указан.'
+            usage: 'git stash drop stash@{<индекс>}'
+          git_stash_clear:
+            name: 'git stash clear'
+            description: 'Очищает все сохраненные стэши.'
   Nuxt:
-    name: ''
-    links: ''
-    description: ''
+    sections:
+      basics:
+        title: '#Основы Nuxt'
+        commands:
+          nuxt_start:
+            name: 'nuxt start'
+            description: 'Запускает приложение Nuxt в production режиме.'
+          nuxt_dev:
+            name: 'nuxt dev'
+            description: 'Запускает приложение Nuxt в режиме разработки.'
   SCSS:
-    name: ''
-    links: ''
-    description: ''
+    description: 'Раздел про SCSS'
+    links:
+      scss_docs: 'https://sass-lang.com/'
+      scss_examples: 'https://scss.com/'
   Links:
-    name: ''
-    links: ''
-    description: ''
+    description: 'Полезные ссылки'
+    links:
+      github: 'https://github.com/'
+      git_scm: 'https://git-scm.com/'
   Hotkeys:
-    name: ''
-    links: ''
-    description: ''
-#  AI:
-#    name: ''
-#    links: ''
-#    description: ''
-
-
-#  Git
-#  Nuxt
-#  SCSS
-#  Links & AI
-#  Hotkeys
-
+    description: 'Список горячих клавиш'
+    keys:
+      copy: 'Ctrl + C: Копировать'
+      paste: 'Ctrl + V: Вставить'
